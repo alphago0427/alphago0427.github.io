@@ -3,8 +3,46 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>이광희의 자기소개 노트</title>
-<meta name="description" content="경영정보학부 이광희가 데이터로 고객을 읽는 마케터가 되기 위해 해 온 일과 계획을 모아 둔 노트입니다.">
+<title>이광희의 자기소개 노트 · 데이터로 고객을 읽는 마케터</title>
+<meta name="description" content="경영정보학부 이광희가 데이터로 고객을 읽는 마케터가 되기 위해 해 온 일과 계획을 모아 둔 자기소개 노트입니다.">
+<meta name="author" content="이광희">
+<meta name="theme-color" content="#f5f6f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14171b" media="(prefers-color-scheme: dark)">
+<link rel="canonical" href="https://alphago0427.github.io/">
+
+<!-- 파비콘: 바둑돌 -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='%231b1f24'/%3E%3Ccircle cx='12.5' cy='12' r='3.2' fill='%23ffffff' opacity='0.35'/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='%231b1f24'/%3E%3C/svg%3E">
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="이광희의 자기소개 노트">
+<meta property="og:title" content="이광희의 자기소개 노트 · 데이터로 고객을 읽는 마케터">
+<meta property="og:description" content="바둑을 복기하듯 데이터로 고객의 진짜 불편을 찾는 마케터를 준비하는 과정과 계획.">
+<meta property="og:url" content="https://alphago0427.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="이광희의 자기소개 노트 · 데이터로 고객을 읽는 마케터">
+<meta name="twitter:description" content="바둑을 복기하듯 데이터로 고객의 진짜 불편을 찾는 마케터를 준비하는 과정과 계획.">
+
+<!-- 구조화 데이터 (Person) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "이광희",
+  "url": "https://alphago0427.github.io/",
+  "jobTitle": "마케팅 직무 지망 (경영정보학부 1학년)",
+  "description": "데이터로 고객의 진짜 불편을 찾는 마케터를 준비하는 국민대학교 경영정보학부 학생.",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "국민대학교 경영정보학부"
+  },
+  "knowsAbout": ["디지털 마케팅", "데이터 분석", "Google Analytics", "고객 행동 분석"],
+  "hasCredential": ["컴퓨터활용능력 1급", "Google Analytics(GAIQ)"]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hahmlet:wght@500;700&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
@@ -51,13 +89,18 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-
 .skip:focus { left: 16px; }
 
 header.top {
+  position: sticky; top: 0; z-index: 5;
   display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px;
   padding-block: 20px; border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(140%) blur(8px);
 }
+@supports not (backdrop-filter: blur(1px)) { header.top { background: var(--bg); } }
 .brand { font-family: var(--display); font-weight: 700; font-size: 1.15rem; color: var(--ink); text-decoration: none; }
 nav ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px 18px; }
 nav a { color: var(--muted); text-decoration: none; font-size: .95rem; }
 nav a:hover { color: var(--ink); text-decoration: underline; }
+nav a[aria-current="true"] { color: var(--ink); font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; }
 
 /* Hero: 바둑판 격자 */
 .hero { position: relative; padding-block: 56px 48px; }
@@ -84,7 +127,7 @@ h1 em { font-style: normal; color: var(--accent); }
 }
 .cta:hover { opacity: .88; }
 
-section { padding-block: 44px; border-top: 1px solid var(--line); scroll-margin-top: 12px; }
+section { padding-block: 44px; border-top: 1px solid var(--line); scroll-margin-top: 80px; }
 h2 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; margin: 0 0 16px; text-wrap: balance; }
 h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-height: 1.45; margin: 0 0 10px; text-wrap: balance; }
 p { margin: 0 0 14px; max-width: 65ch; }
@@ -108,16 +151,24 @@ p { margin: 0 0 14px; max-width: 65ch; }
   background: var(--accent-soft); color: var(--accent); white-space: nowrap;
 }
 
-article.item { padding-block: 32px 8px; scroll-margin-top: 12px; }
+article.item { padding-block: 32px 8px; scroll-margin-top: 80px; }
 article.item + article.item { border-top: 1px dashed var(--line); }
 .meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; font-size: .85rem; color: var(--muted); }
 .key { font-weight: 600; }
+.result { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0 0 14px; padding: 12px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; font-size: .92rem; }
+.result dt { color: var(--muted); }
+.result dd { margin: 0; min-width: 0; }
 .back { font-size: .88rem; }
 
 /* 돌 = 상태 */
 .stone { display: inline-block; width: 14px; height: 14px; border-radius: 50%; flex: none; transform: translateY(2px); }
 .stone.b { background: radial-gradient(circle at 35% 30%, #5a616b, var(--stone-black) 60%); }
 .stone.w { background: var(--stone-white); border: 1.5px solid var(--muted); }
+/* 고대비 모드: 색이 제거돼도 흑/백 구분이 유지되도록 */
+@media (forced-colors: active) {
+  .stone.b { background: CanvasText; border: 1px solid CanvasText; }
+  .stone.w { background: Canvas; border: 1.5px solid CanvasText; }
+}
 .legend { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: .85rem; color: var(--muted); margin: 0 0 18px; }
 .legend span { display: inline-flex; align-items: center; gap: 6px; }
 .legend .stone { transform: none; }
@@ -126,6 +177,9 @@ article.item + article.item { border-top: 1px dashed var(--line); }
 .road li { position: relative; padding: 0 0 18px 24px; }
 .road li .stone { position: absolute; left: -7.5px; top: 6px; transform: none; }
 .road .when { font-weight: 600; font-size: .92rem; }
+.road .state { font-size: .72rem; font-weight: 500; letter-spacing: .03em; margin-left: 8px; padding: 1px 7px; border-radius: 999px; vertical-align: middle; }
+.road .state.done { background: var(--accent-soft); color: var(--accent); }
+.road .state.plan { border: 1px solid var(--line); color: var(--muted); }
 .road .what { color: var(--muted); font-size: .95rem; margin: 2px 0 0; }
 
 .closing { padding-block: 40px 56px; border-top: 1px solid var(--line); }
@@ -183,7 +237,12 @@ article.item + article.item { border-top: 1px dashed var(--line); }
         <div class="meta"><span class="tag">지원동기</span><span>핵심 경험: 바이브 코딩 챌린지 ‘구독해부’ 대시보드</span></div>
         <h3>데이터로 고객의 진짜 불편을 찾아내는 마케터가 되고 싶습니다</h3>
         <p>경영정보학부에서 경영과 IT를 함께 배우며, 좋은 마케팅은 감이 아니라 고객 행동에 대한 이해에서 나온다는 것을 알게 되었습니다. 이를 직접 확인한 경험이 바이브 코딩 챌린지에서 만든 ‘구독해부’ 대시보드입니다.</p>
-        <p>구독 서비스를 여러 개 쓰는 20대가 매달 어디에 얼마가 나가는지 모른다는 문제에서 출발해, 구독 목록을 입력하면 하루 단가와 사용 빈도 대비 비용을 한눈에 보여주도록 기획했습니다. ‘무엇을 보여줄까’보다 ‘사용자가 무엇을 궁금해할까’를 먼저 고민해 <span class="key">사용 빈도 대비 비용</span>을 핵심 지표로 정했습니다.</p>
+        <p>구독 서비스를 여러 개 쓰는 20대가 매달 어디에 얼마가 나가는지 모른다는 문제에서 출발했습니다. 주변 또래에게 ‘구독 중인 서비스와 실제 사용 빈도’를 물어보니, 결제액보다 ‘얼마나 쓰는지 모른다’는 점을 더 답답해했습니다. 그래서 ‘무엇을 보여줄까’보다 ‘사용자가 무엇을 궁금해할까’를 먼저 고민해, 구독 목록을 입력하면 하루 단가와 <span class="key">사용 빈도 대비 비용</span>을 한눈에 보여주도록 핵심 지표를 정했습니다.</p>
+        <dl class="result">
+          <dt>문제</dt><dd>20대가 매달 구독에 얼마를 쓰는지, 얼마나 쓰는지 모른다</dd>
+          <dt>접근</dt><dd>또래 인터뷰로 ‘사용 빈도 대비 비용’을 핵심 지표로 선정</dd>
+          <dt>결과물</dt><dd>구독 목록 입력 → 하루 단가·빈도 대비 비용을 시각화하는 대시보드</dd>
+        </dl>
         <p>삼성전자는 스마트폰부터 가전까지 고객의 일상 전반을 연결하는 만큼, 고객 데이터에서 인사이트를 찾을 기회가 가장 많은 곳입니다. 고객의 숨은 불편을 데이터로 찾아 메시지로 바꾸는 마케터로서 삼성전자의 브랜드 가치를 높이겠습니다.</p>
         <p class="back"><a href="#letter">목록으로 돌아가기</a></p>
       </article>
@@ -224,22 +283,22 @@ article.item + article.item { border-top: 1px dashed var(--line); }
     <section id="growth" aria-labelledby="growth-h">
       <h2 id="growth-h">준비 과정</h2>
       <p>재학 기간 동안 학년별 목표를 세워 두었습니다.</p>
-      <div class="legend" aria-hidden="true">
-        <span><i class="stone b"></i>완료</span>
-        <span><i class="stone w"></i>계획</span>
+      <div class="legend">
+        <span><i class="stone b" aria-hidden="true"></i>완료</span>
+        <span><i class="stone w" aria-hidden="true"></i>계획</span>
       </div>
       <ol class="road">
-        <li><i class="stone b" role="img" aria-label="완료"></i>
-          <div class="when">1학년</div>
+        <li><i class="stone b" aria-hidden="true"></i>
+          <div class="when">1학년<span class="state done">완료</span></div>
           <p class="what">컴퓨터활용능력 1급, Google Analytics(GAIQ) 취득 · 구독해부 대시보드 기획</p></li>
-        <li><i class="stone w" role="img" aria-label="계획"></i>
-          <div class="when">2학년</div>
+        <li><i class="stone w" aria-hidden="true"></i>
+          <div class="when">2학년<span class="state plan">계획</span></div>
           <p class="what">데이터분석 준전문가(ADsP) 취득 · 마케팅 학회에서 기업 사례 분석</p></li>
-        <li><i class="stone w" role="img" aria-label="계획"></i>
-          <div class="when">3학년</div>
+        <li><i class="stone w" aria-hidden="true"></i>
+          <div class="when">3학년<span class="state plan">계획</span></div>
           <p class="what">SQL개발자(SQLD) 취득 · OPIc AL 등급 · 마케팅 공모전 도전</p></li>
-        <li><i class="stone w" role="img" aria-label="계획"></i>
-          <div class="when">4학년</div>
+        <li><i class="stone w" aria-hidden="true"></i>
+          <div class="when">4학년<span class="state plan">계획</span></div>
           <p class="what">마케팅 서포터즈 · 직무 인턴으로 현장 경험</p></li>
       </ol>
     </section>
@@ -247,17 +306,17 @@ article.item + article.item { border-top: 1px dashed var(--line); }
     <section id="vision" aria-labelledby="vision-h">
       <h2 id="vision-h">포부</h2>
       <ol class="road">
-        <li><i class="stone w" role="img" aria-label="계획"></i>
-          <div class="when">입사 1년 차</div>
+        <li><i class="stone w" aria-hidden="true"></i>
+          <div class="when">입사 1년 차<span class="state plan">계획</span></div>
           <p class="what">제품 라인업과 브랜드 전략 학습 · 국가별·연령대별 브랜드 노트 작성 · 빅데이터분석기사, Google Ads 인증</p></li>
-        <li><i class="stone w" role="img" aria-label="계획"></i>
-          <div class="when">2~3년 차</div>
+        <li><i class="stone w" aria-hidden="true"></i>
+          <div class="when">2~3년 차<span class="state plan">계획</span></div>
           <p class="what">MZ세대 고객 분석 담당 · 기기 연결 사용 데이터를 바탕으로 한 캠페인 기획</p></li>
-        <li><i class="stone w" role="img" aria-label="계획"></i>
-          <div class="when">4~5년 차</div>
+        <li><i class="stone w" aria-hidden="true"></i>
+          <div class="when">4~5년 차<span class="state plan">계획</span></div>
           <p class="what">해외 지역 전문가 과정 도전 · 글로벌 마케팅 역량 강화</p></li>
-        <li><i class="stone w" role="img" aria-label="계획"></i>
-          <div class="when">장기</div>
+        <li><i class="stone w" aria-hidden="true"></i>
+          <div class="when">장기<span class="state plan">계획</span></div>
           <p class="what">데이터 기반 의사결정을 팀의 문화로 만드는 리더</p></li>
       </ol>
     </section>
@@ -268,5 +327,38 @@ article.item + article.item { border-top: 1px dashed var(--line); }
     <a href="#main">맨 위로</a>
   </footer>
 </div>
+
+<script>
+// 스크롤에 따라 현재 보고 있는 섹션을 상단 메뉴에 표시
+(function () {
+  var links = Array.prototype.slice.call(document.querySelectorAll('nav a[href^="#"]'));
+  var map = {};
+  links.forEach(function (a) {
+    var id = a.getAttribute('href').slice(1);
+    var sec = document.getElementById(id);
+    if (sec) map[id] = a;
+  });
+  var sections = Object.keys(map).map(function (id) { return document.getElementById(id); });
+  if (!('IntersectionObserver' in window) || sections.length === 0) return;
+
+  function setCurrent(id) {
+    links.forEach(function (a) {
+      if (a.getAttribute('href') === '#' + id) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
+    });
+  }
+
+  var visible = {};
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { visible[e.target.id] = e.isIntersecting; });
+    // 화면에 보이는 섹션 중 문서 순서상 가장 위의 것을 현재로 표시
+    for (var i = 0; i < sections.length; i++) {
+      if (visible[sections[i].id]) { setCurrent(sections[i].id); return; }
+    }
+  }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+
+  sections.forEach(function (s) { observer.observe(s); });
+})();
+</script>
 </body>
 </html>
